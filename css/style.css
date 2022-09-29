@@ -285,9 +285,6 @@ nav span:hover::after {
     transition: all 0.2s ease-in-out;
 }
 .btn-acc1:hover {
-    /* color: var(--full-black); */
-    /* background: var(--main-orange); */
-    /* border: 2px solid var(--full-black); */
     transform: translateY(-5px);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
     transition: all 0.2s ease-in-out;
@@ -300,8 +297,6 @@ nav span:hover::after {
     transition: all 0.2s ease-in-out;
 }
 .btn-acc2:hover {
-    /* color: var(--full-black); */
-    /* background: var(--main-orange); */
     transition: all 0.2s ease-in-out;
     transform: translateY(-5px);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
@@ -327,4 +322,99 @@ nav span:hover::after {
 }
 .icone-medias {
     width: 30px;
+}
+/* responsive accueil */
+@media screen and (max-width: 1200px) {
+    .accueil {
+        width: 100%;
+        background-position: center;
+    }
+}
+@media screen and (max-width: 990px) {
+    .accueil {
+        height: 700px;
+        min-height: 0;
+        padding: 0 var(--space-36);
+    }
+}
+@media screen and (max-width: 770px) {
+    .accueil {
+        height: 600px;
+    }
+    .section-title {
+        font-size: var(--text-4xl);
+    }
+    .txt-animation {
+        font-size: var(--text-2xl);
+    }
+    .btn-acc {
+        width: 160px;
+        height: 40px;
+        font-size: var(--text-md);
+        font-weight: 400;
+    }
+    .btn-rond-menu {
+        width: 60px;
+        height: 60px;
+    }
+}
+@media screen and (max-width: 570px) {
+    .accueil {
+        height: 500px;
+    }
+    .section-title {
+        font-size: var(--text-3xl);
+        text-align: center;
+    }
+    .txt-animation {
+        font-size: var(--text-xl);
+    }
+    .btn-hero,
+    .medias {
+        margin: var(--space-20) auto;
+    }
+    .btn-rond-menu {
+        width: 60px;
+        height: 60px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .section-title {
+        font-size: var(--text-2xl);
+    }
+    .txt-animation {
+        font-size: var(--text-lg);
+        text-align: center;
+    }
+    .medias {
+        margin: var(--space-20) auto;
+    }
+    .btn-hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-acc2 {
+        margin-left: 0;
+    }
+    .btn-rond-menu {
+        width: 50px;
+        height: 50px;
+    }
+    .cont-ligne {
+        width: 20px;
+        height: 38px;
+    }
+    .ligne-unique {
+        height: 3px;
+    }
+    .ligne-unique::before {
+        height: 3px;
+        bottom: 8px;
+    }
+    .ligne-unique::after {
+        height: 3px;
+        top: 8px;
+    }
 }
