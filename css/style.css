@@ -145,3 +145,21 @@ nav span:hover::after {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* responsive nav */
+@media screen and (max-width: 1200px) {
+    .nav-left {
+        display: none;
+    }
+    .btn-rond-menu {
+        width: 70px;
+        height: 70px;
+        border: 1px solid var(--main-white);
+        border-radius: 50%;
+        background: var(--main-black);
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+    }
+}
