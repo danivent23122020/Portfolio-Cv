@@ -72,6 +72,7 @@ body {
     left: 0;
     border-right: 1px dashed var(--main-white);
     z-index: 5;
+    transition: all 0.2s ease-in-out;
 }
 .blocs-menu {
     width: 100%;
@@ -148,9 +149,26 @@ nav span:hover::after {
 
 /* responsive nav */
 @media screen and (max-width: 1200px) {
+    /* navbar */
     .nav-left {
+        left: -300px !important;
+        width: 250px;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-visible {
+        left: 0px !important;
+    }
+    .blocs-menu:nth-child(1) {
         display: none;
     }
+    .blocs-menu:nth-child(7) {
+        display: none;
+    }
+    /* btn menu */
     .btn-rond-menu {
         width: 70px;
         height: 70px;
