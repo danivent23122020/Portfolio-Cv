@@ -162,4 +162,7 @@ nav span:hover::after {
         left: 10px;
         z-index: 10;
     }
+    .cont-ligne {
+        width: var(--space-36);
+    }
 }
