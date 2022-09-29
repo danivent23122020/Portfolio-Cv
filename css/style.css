@@ -6,6 +6,7 @@
     /* palette couleur */
     --main-white: #f1f1f1;
     --shade-white: #b7b7b7;
+    --full-black: #000000;
     --main-black: #333;
     --main-gray: #aaa;
     --main-shadow: #292929;
@@ -16,7 +17,7 @@
     --font-base: "Poppins", sans-serif;
 
     /* Font-size */
-    --size-title: calc(3rem + 4vw);
+    --size-title: calc(2.5rem + 3.5vw);
     --size-sub-title: calc(1.5rem + 2vw);
     --size-section-title: calc(1.5rem + 2vw);
     --text-sm: 1.4rem;
@@ -231,4 +232,63 @@ nav span:hover::after {
         transform: rotate(-45deg);
         transition: bottom 0.3s ease, transform 0.3s 0.3s ease;
     }
+}
+
+/* ===== btn scroll up ===== */
+.btn-scrollup {
+    display: none;
+}
+/* ====== Accueil ======= */
+.accueil {
+    background: url(../img/accueil.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 100vh;
+    min-height: 900px;
+    width: calc(100% - 300px);
+    margin-left: auto;
+    padding: 0 var(--space-52);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section-title {
+    font-size: var(--size-title);
+    font-family: var(--font-title);
+    letter-spacing: 1px;
+}
+.txt-animation {
+    font-size: var(--text-3xl);
+    font-family: var(--font-base);
+    margin: var(--space-16) 0;
+}
+.btn-acc {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    font-size: var(--text-lg);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin: var(--space-10) 0 0 0;
+    border-radius: 3px;
+}
+
+.btn-acc1 {
+    color: var(--main-white);
+    background: var(--full-black);
+}
+.btn-acc2 {
+    color: var(--full-black);
+    background: transparent;
+    margin-left: var(--space-10);
+    border: 2px solid var(--full-black);
+}
+
+img {
+    width: 25px;
 }
