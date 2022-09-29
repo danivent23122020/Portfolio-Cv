@@ -60,7 +60,7 @@ body {
     background-color: var(--main-white);
 }
 
-/* === Nav/Portrait/Contact === */
+/* ===== Nav/Portrait/Contact ===== */
 /* Nav */
 .nav-left {
     width: 300px;
@@ -193,10 +193,24 @@ nav span:hover::after {
     .ligne-unique::after {
         content: "";
         position: absolute;
-        bottom: -10px;
+        top: 10px;
         background: var(--main-white);
         width: 100%;
         height: 4px;
         border-radius: 5px;
+    }
+    /* anim btn */
+    .cont-ligne.active .ligne-unique {
+        background: transparent;
+    }
+    .cont-ligne.active .ligne-unique::after {
+        top: 0;
+        transform: rotate(45deg);
+        transition: top 0.3s ease, transform 0.3s 0.3s ease;
+    }
+    .cont-ligne.active .ligne-unique::before {
+        bottom: 0;
+        transform: rotate(-45deg);
+        transition: bottom 0.3s ease, transform 0.3s 0.3s ease;
     }
 }
