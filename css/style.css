@@ -181,4 +181,22 @@ nav span:hover::after {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    .ligne-unique::before {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        background: var(--main-white);
+        width: 100%;
+        height: 4PX;
+        border-radius: 5px;
+    }
+    .ligne-unique::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        background: var(--main-white);
+        width: 100%;
+        height: 4PX;
+        border-radius: 5px;
+    }
 }
