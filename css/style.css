@@ -164,5 +164,11 @@ nav span:hover::after {
     }
     .cont-ligne {
         width: var(--space-36);
+        height: var(--space-36);
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
