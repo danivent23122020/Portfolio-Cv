@@ -21,17 +21,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Script js -->
+        <script
+            src="https://unpkg.com/typewriter-effect@latest/dist/core.js"
+            defer
+        ></script>
         <script src="./js/app.js" defer></script>
         <title>Mon CV</title>
     </head>
     <body>
-        <!---------- NAV Btn Menu --------->
+        <!--------------- NAV Btn Menu --------------->
         <div class="btn-rond-menu">
             <div class="cont-ligne">
                 <div class="ligne-unique"></div>
             </div>
         </div>
-        <!--------------- NAV ---------------->
+        <!------------------- NAV -------------------->
         <nav class="nav-left">
             <div class="blocs-menu">
                 <div class="circle-portrait">
@@ -71,7 +75,7 @@
                 </div>
             </div>
         </nav>
-        <!------------ btn scroll up --------------->
+        <!------------- btn scroll up ---------------->
         <div class="btn-scrollup">
             <img
                 src="./img/scrollUp.png"
@@ -79,10 +83,11 @@
                 alt="icone chevron haut"
             />
         </div>
-        <!------------ Section Accueil ------------->
+        <!------------- Section Accueil -------------->
         <section id="accueil" class="accueil">
             <h1 class="section-title">Bienvenue sur mon Portfolio</h1>
-            <p class="txt-animation">Patience et expertise à votre service</p>
+            <p class="name-animation"></p>
+            <p class="txt-animation"></p>
             <!-- btn accueil -->
             <div class="btn-hero">
                 <a href="#" class="btn-acc btn-acc1">Portfolio</a>
@@ -119,5 +124,62 @@
                 </a>
             </div>
         </section>
+        <!------------ Section Presentation ----------->
+        <section class="presentation" id="presentation">
+            <h2 class="size-title">Qui suis-je ?</h2>
+            <div class="container-presentation">
+                <div class="fond-form"></div>
+                <div class="pres-gauche">
+                    <h3 class="size-sub-title">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sed eveniet at atque, inventore vel autem.
+                    </h3>
+                    <hr />
+                    <p>
+                        Delectus ducimus aliquid facilis tempora perspiciatis
+                        mollitia maxime voluptate incidunt et vitae dignissimos
+                        libero, cum impedit in sapiente ut corporis porro?
+                        Expedita voluptas harum natus placeat fugit.
+                    </p>
+                    <hr />
+                    <p>
+                        Aut facere recusandae similique dignissimos blanditiis
+                        ullam excepturi ab, earum sunt beatae eum unde
+                        repellendus voluptates, ipsam ducimus amet quibusdam non
+                        consequatur labore consectetur est et totam. Non maiores
+                        ipsam aut quibusdam!
+                    </p>
+                </div>
+                <div class="pres-droite">
+                    <ul class="liste-presentation">
+                        <li class="item-liste i1">
+                            <span class="chiffre-style">1. </span>
+                            <p class="text-liste">UX Design Expert</p>
+                        </li>
+                        <li class="item-liste i2">
+                            <span class="chiffre-style">2. </span>
+                            <p class="text-liste">Spécialiste UX</p>
+                        </li>
+                        <li class="item-liste i3">
+                            <span class="chiffre-style">3. </span>
+                            <p class="text-liste">SEO</p>
+                        </li>
+                        <li class="item-liste i4">
+                            <span class="chiffre-style">4. </span>
+                            <div class="text-liste">Web Design</div>
+                        </li>
+                        <li class="item-liste i5">
+                            <span class="chiffre-style">5. </span>
+                            <p class="text-liste">Suite Adobe</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!------------- Section Portfolio ------------->
+        <!--------------- Section Range --------------->
+        <!------------- Section Experience ------------>
+        <!------------- Section Parallax -------------->
+        <!-------------- Section Contact -------------->
     </body>
 </html>
