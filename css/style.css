@@ -22,6 +22,7 @@
     --size-title: calc(2.5rem + 3.5vw);
     --size-sub-title: calc(1.5rem + 2vw);
     --size-section-title: calc(1.5rem + 2vw);
+    --size-p: calc(0.2rem + 1vw);
     --text-sm: 1.4rem;
     --text-base: 1.6rem;
     --text-md: 1.8rem;
@@ -56,7 +57,7 @@
 
 html {
     font-size: 62.5%;
-    scroll-behavior: "smooth";
+    scroll-behavior: smooth;
 }
 body {
     font-family: var(--font-base);
@@ -426,4 +427,83 @@ nav span:hover::after {
         height: 3px;
         top: 8px;
     }
+}
+/* ====== Presentation ======= */
+.presentation {
+    width: calc(100% - 300px);
+    height: 100vh;
+    min-height: 900px;
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    border-top: 1px dashed var(--main-black);
+    border-bottom: 1px dashed var(--main-black);
+}
+.fond-form {
+    position: absolute;
+    width: 76%;
+    height: 220%;
+    background: #f4cb38;
+    background-image: linear-gradient(to right, #29323c, #485563);
+    transform: rotate(-45deg) translateX(50px) translateY(-15px);
+    z-index: -1;
+}
+.size-title {
+    font-size: var(--size-title);
+    font-family: var(--font-title);
+    text-align: center;
+    color: var(--main-white);
+}
+.container-presentation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: var(--space-52) 0 0 0;
+}
+/* pres-gauche  */
+.pres-gauche {
+    width: 600px;
+    padding: 0 var(--space-20);
+    flex-shrink: 0;
+}
+.size-sub-title {
+    font-size: var(--text-xl);
+    font-family: var(--font-title);
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--main-white);
+}
+.pres-gauche hr {
+    width: 100px;
+    margin: var(--space-10) auto var(--space-20);
+}
+.pres-gauche p {
+    font-size: var(--size-p);
+    text-align: justify;
+    color: var(--main-white);
+    padding: 0 var(--space-10);
+}
+/* pres-droite */
+.pres-droite {
+    width: 600px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 var(--space-20);
+}
+.liste-presentation {
+    color: var(--main-white);
+    padding-left: var(--space-10);
+}
+.chiffre-style {
+    font-size: var(--text-3xl);
+    font-family: var(--font-title);
+}
+.text-liste {
+    font-size: var(--text-2xl);
+    display: inline;
 }
