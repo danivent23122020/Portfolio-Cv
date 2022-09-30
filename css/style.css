@@ -428,6 +428,7 @@ nav span:hover::after {
         top: 8px;
     }
 }
+
 /* ====== Presentation ======= */
 .presentation {
     width: calc(100% - 300px);
@@ -605,4 +606,100 @@ nav span:hover::after {
     .text-liste {
         font-size: var(--text-xl);
     }
+}
+
+/* ====== Portfolio ======= */
+.portfolio {
+    width: calc(100% - 300px);
+    margin-left: auto;
+    height: 100vh;
+    min-height: 900px;
+}
+/* title */
+.title-port {
+    font-size: var(--size-title);
+    font-family: var(--font-title);
+    text-align: center;
+    padding: var(--space-52) 0;
+}
+.container-portfolio {
+    width: 100%;
+    height: auto;
+    padding: 0 0 var(--space-52) 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* card */
+.item {
+    width: 420px;
+    height: 400px;
+    margin: 0 var(--space-8) var(--space-28);
+    color: var(--main-black);
+    background-color: var(--main-white);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-out;
+    border-radius: 5px;
+}
+.item:hover {
+    transform: translateY(-10px);
+    transition: all 0.2s ease-out;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+}
+/* img */
+.cont-img-port {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+.cont-img-port img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+}
+/* txt */
+.item h3 {
+    font-size: var(--text-xl);
+    font-family: var(--font-title);
+    padding: var(--space-10) var(--space-10) 0;
+}
+.item p {
+    font-size: var(--text-lg);
+    font-family: var(--font-base);
+    padding: var(--space-10) var(--space-10) 0;
+}
+/* btn projets */
+.btn-projets {
+    display: block;
+    margin: var(--space-10);
+    width: 250px;
+    height: 50px;
+    font-size: var(--text-lg);
+    line-height: 50px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border: 1px solid var(--main-black);
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.btn-projets::after {
+    content: "";
+    width: 100px;
+    height: 240px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: -50px;
+    transform: rotate(-45deg);
+}
+.btn-projets:hover::after {
+    transition: transform 0.4s 0.1s linear;
+    transform: translateX(400px);
 }
