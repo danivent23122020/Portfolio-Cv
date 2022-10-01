@@ -635,7 +635,7 @@ nav span:hover::after {
 .item {
     width: 420px;
     height: 400px;
-    margin: 0 var(--space-8) var(--space-28);
+    margin: 0 var(--space-16) var(--space-28);
     color: var(--main-black);
     background-color: var(--main-white);
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
@@ -702,4 +702,19 @@ nav span:hover::after {
 .btn-projets:hover::after {
     transition: transform 0.4s 0.1s linear;
     transform: translateX(400px);
+}
+/* responsive portfolio */
+@media screen and (max-width: 1200px) {
+    .portfolio {
+        width: 100%;
+        height: auto;
+    }
+    .item {
+        margin: 0 var(--space-20) var(--space-36);
+    }
+}
+@media screen and (max-width: 450px) {
+    .cont-img-port {
+        height: auto;
+    }
 }
