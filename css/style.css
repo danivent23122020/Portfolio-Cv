@@ -972,7 +972,7 @@ nav span:hover::after {
 /* ====== Parallax ======= */
 .parallax {
     width: calc(100% - 300px);
-    height: 250px;
+    height: 300px;
     margin-left: auto;
     background: url(../img/accueil.jpg);
     background-position: right;
@@ -980,7 +980,7 @@ nav span:hover::after {
     background-size: cover;
     background-attachment: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     border-top: 1px dashed var(--main-black);
     border-bottom: 1px dashed var(--main-black);
@@ -994,7 +994,6 @@ nav span:hover::after {
 .txt-para {
     font-size: var(--text-2xl);
     font-weight: 600;
-    margin: 0 var(--space-28);
 }
 /* responsive parallax */
 @media screen and (max-width: 1300px) {
@@ -1017,21 +1016,8 @@ nav span:hover::after {
     .txt-para {
         font-size: var(--text-lg);
     }
-
 }
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
+
 /* ====== Contact ======= */
 .contact {
     width: calc(100% - 300px);
