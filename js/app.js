@@ -362,7 +362,7 @@ console.log(dateJour / (1000 * 3600 * 24));
 function diffJoursDates(firstdate, seconddate) {
     return (seconddate - firstdate) / (1000 * 3600 * 24);
 }
-let numDiff = diffJoursDates(new Date(2022, 09, 01), new Date(2022, 09, 27));
+let numDiff = diffJoursDates(new Date(2022, 10, 01), new Date(2022, 10, 27));
 console.log(numDiff);
 
 //
