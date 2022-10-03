@@ -85,7 +85,7 @@
         </div>
         <!------------- Section Accueil -------------->
         <section id="accueil" class="accueil">
-            <h1 class="section-title">Bienvenue sur mon Portfolio</h1>
+            <h1 class="title-accueil">Bienvenue sur mon Portfolio</h1>
             <p class="name-animation"></p>
             <p class="txt-animation"></p>
             <!-- btn accueil -->
@@ -133,7 +133,8 @@
         <!------------ Section Presentation ----------->
         <section class="presentation" id="presentation">
             <div class="fond-form"></div>
-            <h2 class="size-title">Qui suis-je ?</h2>
+            <h2 class="title-pres">Qui suis-je ?</h2>
+            <!-- <h2 class="size-title">Qui suis-je ?</h2> -->
             <div class="container-presentation">
                 <div class="pres-gauche">
                     <h3 class="size-sub-title">
@@ -296,7 +297,7 @@
                 </div>
             </div>
         </section>
-        <!--------------- Section Competences/Range --------------->
+        <!--------- Section Competences/Range --------->
         <section class="range" id="range">
             <h2 class="title-range">Mes Compétences</h2>
             <div class="grid-skills">
@@ -477,6 +478,37 @@
                 </p>
             </div>
         </footer>
+        <!---------------- Cookie Banner -------------->
+        <div id="cookieModal">
+            <div id="cookieContent">
+                <img src="./img/cookie.png" alt="icone cookie" />
+                <p>
+                    Nous utilisons les cookies pour améliorer votre navigation.
+                    Esse dignissimos harum quisquam ipsam nemo debitis cum, vero
+                    blanditiis culpa! Assumenda.
+                </p>
+                <a href="https://google.fr" class="my-4"
+                    >Politique de confidentialité</a
+                >
+                <!-- div buttons -->
+                <div class="btns d-flex">
+                    <button
+                        type="button"
+                        id="acceptCookie"
+                        class="btn btn-success btn-lg"
+                    >
+                        Accepter
+                    </button>
+                    <button
+                        type="button"
+                        id="refusedCookie"
+                        class="btn btn-danger btn-lg ms-3"
+                    >
+                        Refuser
+                    </button>
+                </div>
+            </div>
+        </div>
         <!-- Script CDN ScrollMagic -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>

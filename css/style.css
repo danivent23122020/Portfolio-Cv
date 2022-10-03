@@ -238,9 +238,49 @@ nav span:hover::after {
     }
 }
 
-/* ===== btn scroll up ===== */
+/*=== setting scroll to top ===*/
+/* btn scrollup */
 .btn-scrollup {
-    display: none;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+}
+.icone {
+    width: 60px;
+}
+.btn-scrollup.active {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+/* responsive scrollup */
+@media screen and (max-width: 550px) {
+    .btn-scrollup {
+        width: 60px;
+        height: 60px;
+    }
+    .icone {
+        width: 50px;
+    }
+    .btn-scrollup.active {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 /* ====== Accueil ======= */
 .accueil {
@@ -258,7 +298,7 @@ nav span:hover::after {
     flex-direction: column;
     justify-content: center;
 }
-.section-title {
+.title-accueil {
     font-size: var(--size-title);
     font-family: var(--font-title);
     letter-spacing: 1px;
@@ -347,7 +387,7 @@ nav span:hover::after {
     .accueil {
         height: 600px;
     }
-    .section-title {
+    .title-accueil {
         font-size: var(--text-4xl);
     }
     .name-animation,
@@ -369,7 +409,7 @@ nav span:hover::after {
     .accueil {
         height: 500px;
     }
-    .section-title {
+    .title-accueil {
         font-size: var(--text-3xl);
         text-align: center;
         margin-top: var(--space-36);
@@ -388,7 +428,7 @@ nav span:hover::after {
     }
 }
 @media screen and (max-width: 450px) {
-    .section-title {
+    .title-accueil {
         font-size: var(--text-2xl);
         margin-top: var(--space-36);
     }
@@ -456,7 +496,7 @@ nav span:hover::after {
     transform: rotate(45deg) translateX(100px) translateY(-15px);
     z-index: -1;
 }
-.size-title {
+.title-pres {
     font-size: var(--size-title);
     font-family: var(--font-title);
     text-align: center;
@@ -1196,5 +1236,104 @@ footer p a {
         width: 100%;
         height: 100vh;
         margin-left: auto;
+    }
+}
+
+/* === section cookie === */
+#cookieModal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+}
+#cookieModal.active {
+    display: flex;
+}
+#cookieContent {
+    width: auto;
+    height: auto;
+    padding: var(--space-20) var(--space-28);
+    background-color: var(--main-yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#cookieContent img {
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+}
+#cookieContent p {
+    text-align: justify;
+    font-family: var(--font-base);
+    color: var(--main-black);
+    font-size: var(--text-lg);
+    line-height: var(--space-28);
+}
+#cookieContent a {
+    font-size: var(--text-md);
+    text-decoration: none;
+}
+.hide {
+    visibility: hidden;
+    bottom: 0;
+    right: 2em;
+}
+.show {
+    visibility: visible;
+    bottom: 2em;
+    right: 2em;
+}
+/* btn */
+#acceptCookie,
+#refusedCookie{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    font-size: var(--text-lg);
+    font-family: var(--font-base);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin: var(--space-10) 0 0 0;
+    border: 1px solid var(--main-black);
+    border-radius: 3px;
+}
+#acceptCookie{
+    color: var(--main-white);
+    background-color: limegreen;
+}
+#acceptCookie:hover{
+    background-color: rgb(26, 106, 26);
+}
+#refusedCookie{
+    color: var(--main-white);
+    background-color: crimson;
+    margin-left: var(--space-10);
+}
+#refusedCookie:hover{
+    background-color: rgb(129, 14, 35);
+}
+/* show popup */
+@media only screen and (max-width: 600px) {
+    #cookiePopup {
+        width: 100%;
+    }
+    .hide {
+        bottom: 2em;
+        right: 0;
+    }
+    .show {
+        right: 0;
+        bottom: 0;
     }
 }
