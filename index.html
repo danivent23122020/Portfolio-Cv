@@ -425,7 +425,51 @@
         </section>
         <!-------------- Section Contact -------------->
         <section class="contact" id="contact">
-            <h2 class="title-contact">Contact</h2>
+            <h2 class="title-contact contact-animation">Entrons en Contact</h2>
+            <div class="container-form">
+                <!-- form  -->
+                <form class="form-bloc">
+                    <!-- input prenom -->
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" required id="prenom" minlength="3" />
+                    </div>
+                    <!-- input nom -->
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" required id="nom" minlength="3" />
+                    </div>
+                    <!-- input textarea -->
+                    <div class="textarea">
+                        <label>Indiquez-nous précisemment votre projet !</label>
+                        <textarea
+                            id="txt"
+                            placeholder="Votre demande..."
+                        ></textarea>
+                    </div>
+                    <!-- input submit -->
+                    <div class="btn-sub">
+                        <input
+                            type="submit"
+                            value="ENVOYER"
+                            class="btn-submit"
+                        />
+                    </div>
+                </form>
+            </div>
         </section>
+        <!---------------- Footer ---------------->
+        <footer class="footer">
+            <div class="container-footer">
+                <p>
+                    Thème CV Portfolio, tous droits réservés &copy;
+                    <span class="year"
+                        ><a href="https://daniel-ventura.fr/" target="_blank"
+                            >Prestation Web 42</a
+                        ></span
+                    >
+                </p>
+            </div>
+        </footer>
     </body>
 </html>

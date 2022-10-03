@@ -4,6 +4,7 @@
 /* === root/html === */
 :root {
     /* palette couleur */
+    --full-white: #fff;
     --main-white: #f1f1f1;
     --shade-white: #b7b7b7;
     --full-black: #000000;
@@ -1025,14 +1026,170 @@ nav span:hover::after {
     margin-left: auto;
 }
 .title-contact {
+    color: var(--main-black);
     font-size: var(--size-title);
     font-family: var(--font-title);
     text-align: center;
     padding: var(--space-52) 0;
 }
-/* responsive parallax */
+.container-form {
+    width: 70%;
+    height: 650px;
+    margin: 0 auto;
+}
+.form-bloc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.form-group {
+    position: relative;
+    display: flex;
+    margin: 0 0 var(--space-44) 0;
+}
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: var(--text-lg);
+    font-family: var(--base-title);
+    color: #666;
+    transform: translateY(-50%);
+    transition: all 0.4s ease-out;
+}
+/* input nom prenom */
+.form-group input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: var(--space-10) 0;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 3px solid #666;
+    color: var(--main-black);
+    font-size: var(--text-xl);
+    font-family: var(--base-title);
+    transition: all 0.4s ease-out;
+}
+/* textarea */
+.textarea {
+    display: flex;
+    flex-direction: column;
+}
+.textarea label {
+    color: var(--main-black);
+    font-size: var(--text-lg);
+    font-family: var(--base-title);
+    margin: 0 0 var(--space-20) 0;
+}
+.textarea textarea {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-left: 2px solid #666;
+    border-top: 2px solid #666;
+    border-right: 4px solid #666;
+    border-bottom: 4px solid #666;
+    border-radius: 5px;
+    color: var(--main-black);
+    font-size: var(--text-lg);
+    font-family: var(--base-title);
+    padding: var(--space-6);
+}
+.textarea textarea::placeholder {
+    padding: var(--space-6);
+    opacity: 0.6;
+}
+/* btn submit */
+.btn-sub {
+    margin: 0 auto;
+}
+.btn-submit {
+    width: auto;
+    height: auto;
+    color: var(--main-black);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    padding: var(--space-16) var(--space-52);
+    border: none;
+    border-left: 2px solid #666;
+    border-top: 2px solid #666;
+    border-right: 3px solid #666;
+    border-bottom: 3px solid #666;
+    border-radius: 9999px;
+    background-image: linear-gradient(
+        to right,
+        transparent 50%,
+        rgb(65, 65, 65) 50%,
+        rgb(134, 134, 134)
+    );
+    background-size: 200%;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.btn-submit:hover {
+    color: var(--full-white);
+    background-position: 100%;
+    transition: all 0.3s ease-out;
+    border-left: 2px solid var(--full-white);
+    border-top: 2px solid var(--full-white);
+    border-right: 3px solid var(--full-white);
+    border-bottom: 3px solid var(--full-white);
+}
+/* Animation input contact */
+.form-group:focus-within label,
+.form-group.animation label {
+    top: 0px;
+    transform: translateY(-100%);
+}
+
+/* responsive contact */
 @media screen and (max-width: 1200px) {
     .contact {
+        width: 100%;
+        height: 100vh;
+        margin-left: auto;
+    }
+}
+@media screen and (max-width: 570px) {
+    .textarea label {
+        font-size: var(--text-md);
+    }
+    .btn-submit {
+        color: var(--main-black);
+        font-size: var(--text-md);
+        font-weight: 600;
+    }
+}
+
+/* ====== Footer ======= */
+.footer {
+    width: calc(100% - 300px);
+    height: 200px;
+    margin-left: auto;
+    background-color: var(--main-black);
+}
+.container-footer {
+    width: 50%;
+    height: 100px;
+    margin: 0 auto;
+    padding: var(--space-36);
+}
+footer p {
+    font-size: var(--text-lg);
+    color: var(--main-white);
+}
+footer p a {
+    font-size: var(--text-lg);
+    color: var(--shade-white);
+    text-decoration: none;
+}
+/* responsive parallax */
+@media screen and (max-width: 1200px) {
+    .footer {
         width: 100%;
         height: 100vh;
         margin-left: auto;

@@ -62,3 +62,33 @@ typewriter
     .typeString("<span style='color: red; font-weight: 600'> WordPress</span>")
     .pauseFor(2500)
     .start();
+
+// *** anim title contact ****
+let titleContact = document.querySelector(".contact-animation");
+
+let contactTypewriter = new Typewriter(titleContact, {
+    loop: true,
+    deleteSpeed: 120,
+});
+
+contactTypewriter
+    .pauseFor(1500)
+    .changeDelay(120)
+    .pauseFor(1500)
+    .typeString("Entrons en Contact")
+    .pauseFor(2000)
+    .start();
+
+// *** anim input contact ****
+const inputFields = document.querySelectorAll(".form-group");
+//
+for (let index = 0; index < inputFields.length; index++) {
+    const field = inputFields[index];
+    field.addEventListener("input", (e) => {
+        if (e.target.value != "") {
+            e.target.parentNode.classList.add("animation");
+        } else if (e.target.value === "") {
+            e.target.parentNode.classList.remove("animation");
+        }
+    });
+}
