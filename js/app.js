@@ -93,11 +93,11 @@ for (let index = 0; index < inputFields.length; index++) {
     });
 }
 
-// *** anim GSAP ScrollMagic ****
+// *** anim GSAP Greensock ****
+// anime navbar left + accueil
 const navLeft = document.querySelector(".nav-left");
 const titre = document.querySelector("h1");
 const btn = document.querySelectorAll(".btn-hero");
-// const btn = document.querySelector(".btn-hero");
 const btnMedias = document.querySelectorAll(".media");
 // init timeline
 const timeLine1 = gsap.timeline({ paused: true });
@@ -105,8 +105,144 @@ const timeLine1 = gsap.timeline({ paused: true });
 timeLine1
     .to(navLeft, { left: "0px", ease: Power3.easeOut, duration: 0.4 })
     .from(titre, { y: -60, opacity: 0, ease: Power3.easeOut, duration: 0.5 })
-    .staggerFrom(btn, 1, { opacity: 0 }, 0.5, "-=0.30")
-    .staggerFrom(btnMedias, 1, { opacity: 0 }, 0.4, "-=0.30");
+    .staggerFrom(btn, 1, { opacity: 0 }, 0.4, "-=0.30")
+    .staggerFrom(btnMedias, 1, { opacity: 0 }, 0.4, "-=0.40");
 window.addEventListener("load", () => {
     timeLine1.play();
 });
+
+// *** anim ScrollMagic ****
+// anime presentation
+const presentationContainer = document.querySelector(".presentation");
+const titrePres = document.querySelector(".size-title");
+const presGauche = document.querySelector(".pres-gauche");
+const listePres = document.querySelectorAll(".item-liste");
+// init timeline
+const timelinePres = new TimelineMax();
+// anim timeline
+timelinePres
+    .from(titrePres, {
+        y: -150,
+        opacity: 0,
+        duration: 0.6,
+    })
+    .from(
+        presGauche,
+        {
+            y: -50,
+            opacity: 0,
+            duration: 0.7,
+        },
+        "-=0.1"
+    )
+    .staggerFrom(
+        listePres,
+        1,
+        {
+            opacity: 0,
+        },
+        0.2,
+
+        "-=0.2"
+    );
+//
+const controller = new ScrollMagic.Controller();
+//
+const scene = new ScrollMagic.Scene({
+    triggerElement: presentationContainer,
+    triggerHook: 0.4,
+    // reverse: false,
+    reverse: true,
+})
+    .setTween(timelinePres)
+    // .addIndicators()
+    .addTo(controller);
+
+// anim Portfolio
+// vague 1
+const portfolioContainer = document.querySelector(".portfolio");
+const titrePortfolio = document.querySelector(".title-port");
+const itemPortfolio = document.querySelectorAll(".vague1");
+// init timeline
+const tlPortfolio = new TimelineMax();
+// anim timeline
+tlPortfolio
+    .from(titrePortfolio, {
+        y: -50,
+        opacity: 0,
+        duration: 0.6,
+    })
+    .staggerFrom(
+        itemPortfolio,
+        1,
+        {
+            opacity: 0,
+        },
+        0.3,
+
+        "-=0.3"
+    );
+//
+const scene1 = new ScrollMagic.Scene({
+    triggerElement: portfolioContainer,
+    triggerHook: 0.4,
+    // reverse: false,
+    reverse: true,
+})
+    .setTween(tlPortfolio)
+    .addIndicators()
+    .addTo(controller);
+
+// vague 2
+const itemPortfolio2 = document.querySelectorAll(".vague2");
+// init timeline
+const tlPortfolio2 = new TimelineMax();
+// anim timeline
+tlPortfolio2
+    .staggerFrom(
+        itemPortfolio2,
+        1,
+        {
+            opacity: 0,
+        },
+        0.3,
+
+        "-=0.3"
+    );
+//
+const scene2 = new ScrollMagic.Scene({
+    triggerElement: itemPortfolio,
+    triggerHook: 0.2,
+    // reverse: false,
+    reverse: true,
+})
+    .setTween(tlPortfolio2)
+    .addIndicators()
+    .addTo(controller);
+
+// vague 3
+const itemPortfolio3 = document.querySelectorAll(".vague3");
+// init timeline
+const tlPortfolio3 = new TimelineMax();
+// anim timeline
+tlPortfolio3
+    .staggerFrom(
+        itemPortfolio3,
+        1,
+        {
+            opacity: 0,
+        },
+        0.3,
+
+        "-=0.3"
+    );
+//
+const scene3 = new ScrollMagic.Scene({
+    triggerElement: itemPortfolio2,
+    triggerHook: 0.2,
+    // reverse: false,
+    reverse: true,
+})
+    .setTween(tlPortfolio3)
+    .addIndicators()
+    .addTo(controller);
