@@ -31,7 +31,7 @@ nameTypewriter
     .typeString("Moi c'est Michel Martin.")
     .start();
 
-// *** anim txt type writer ****
+// *** anim txt/skills type writer ****
 let app = document.querySelector(".txt-animation");
 
 let typewriter = new Typewriter(app, {
@@ -92,3 +92,21 @@ for (let index = 0; index < inputFields.length; index++) {
         }
     });
 }
+
+// *** anim GSAP ScrollMagic ****
+const navLeft = document.querySelector(".nav-left");
+const titre = document.querySelector("h1");
+const btn = document.querySelectorAll(".btn-hero");
+// const btn = document.querySelector(".btn-hero");
+const btnMedias = document.querySelectorAll(".media");
+// init timeline
+const timeLine1 = gsap.timeline({ paused: true });
+// anim timeline
+timeLine1
+    .to(navLeft, { left: "0px", ease: Power3.easeOut, duration: 0.4 })
+    .from(titre, { y: -60, opacity: 0, ease: Power3.easeOut, duration: 0.5 })
+    .staggerFrom(btn, 1, { opacity: 0 }, 0.5, "-=0.30")
+    .staggerFrom(btnMedias, 1, { opacity: 0 }, 0.4, "-=0.30");
+window.addEventListener("load", () => {
+    timeLine1.play();
+});
