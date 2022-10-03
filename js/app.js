@@ -190,7 +190,7 @@ const scene1 = new ScrollMagic.Scene({
     reverse: true,
 })
     .setTween(tlPortfolio)
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
 // vague 2
@@ -198,17 +198,16 @@ const itemPortfolio2 = document.querySelectorAll(".vague2");
 // init timeline
 const tlPortfolio2 = new TimelineMax();
 // anim timeline
-tlPortfolio2
-    .staggerFrom(
-        itemPortfolio2,
-        1,
-        {
-            opacity: 0,
-        },
-        0.3,
+tlPortfolio2.staggerFrom(
+    itemPortfolio2,
+    1,
+    {
+        opacity: 0,
+    },
+    0.3,
 
-        "-=0.3"
-    );
+    "-=0.3"
+);
 //
 const scene2 = new ScrollMagic.Scene({
     triggerElement: itemPortfolio,
@@ -217,7 +216,7 @@ const scene2 = new ScrollMagic.Scene({
     reverse: true,
 })
     .setTween(tlPortfolio2)
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
 // vague 3
@@ -225,17 +224,16 @@ const itemPortfolio3 = document.querySelectorAll(".vague3");
 // init timeline
 const tlPortfolio3 = new TimelineMax();
 // anim timeline
-tlPortfolio3
-    .staggerFrom(
-        itemPortfolio3,
-        1,
-        {
-            opacity: 0,
-        },
-        0.3,
+tlPortfolio3.staggerFrom(
+    itemPortfolio3,
+    1,
+    {
+        opacity: 0,
+    },
+    0.3,
 
-        "-=0.3"
-    );
+    "-=0.3"
+);
 //
 const scene3 = new ScrollMagic.Scene({
     triggerElement: itemPortfolio2,
@@ -244,5 +242,65 @@ const scene3 = new ScrollMagic.Scene({
     reverse: true,
 })
     .setTween(tlPortfolio3)
-    .addIndicators()
+    // .addIndicators()
+    .addTo(controller);
+
+// anim Competence/range
+const sectionComp = document.querySelector(".range");
+const titleComp = document.querySelector(".title-range");
+const allLabel = document.querySelectorAll(".label-skill");
+const allPourcent = document.querySelectorAll(".number-skill");
+const allBarres = document.querySelectorAll(".barre-skill");
+const allGrayBarres = document.querySelectorAll(".barre-grises");
+
+// init timeline
+const tlCompetences = new TimelineMax();
+// anim timeline
+tlCompetences
+    .from(titleComp, {
+        y: -50,
+        opacity: 0,
+        duration: 0.6,
+    })
+    .staggerFrom(
+        allGrayBarres,
+        0.5,
+        { y: -40, opacity: 0 },
+        0.1,
+
+        "-=0.4"
+    )
+    .staggerFrom(
+        allBarres,
+        0.5,
+        { y: -40, opacity: 0 },
+        0.1,
+
+        "-=0.4"
+    )
+    .staggerFrom(
+        allPourcent,
+        0.5,
+        { y: -40, opacity: 0 },
+        0.1,
+
+        "-=0.3"
+    )
+    .staggerFrom(
+        allLabel,
+        0.5,
+        { y: -40, opacity: 0 },
+        0.1,
+
+        "-=0.3"
+    );
+//
+const sceneComp = new ScrollMagic.Scene({
+    triggerElement: sectionComp,
+    triggerHook: 0.2,
+    // reverse: false,
+    reverse: true,
+})
+    .setTween(tlCompetences)
+    // .addIndicators()
     .addTo(controller);
