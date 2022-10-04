@@ -309,7 +309,7 @@ nav span:hover::after {
     font-family: var(--font-base);
     margin: var(--space-16) 0;
 }
-.btns-hero{
+.btns-hero {
     display: flex;
 }
 .btn-acc {
@@ -1259,7 +1259,7 @@ footer p a {
     width: auto;
     height: auto;
     padding: var(--space-20) var(--space-28);
-    background-color: var(--main-yellow);
+    background-color: var(--main-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1293,7 +1293,7 @@ footer p a {
 }
 /* btn */
 #acceptCookie,
-#refusedCookie{
+#refusedCookie {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -1308,23 +1308,43 @@ footer p a {
     border: 1px solid var(--main-black);
     border-radius: 3px;
 }
-#acceptCookie{
+#acceptCookie {
     color: var(--main-white);
     background-color: limegreen;
+    transition: 0.2s ease-in-out;
 }
-#acceptCookie:hover{
+#acceptCookie:hover {
+    font-weight: bold;
     background-color: rgb(26, 106, 26);
+    transition: 0.2s ease-in-out;
 }
-#refusedCookie{
+#refusedCookie {
     color: var(--main-white);
     background-color: crimson;
     margin-left: var(--space-10);
+    transition: 0.2s ease-in-out;
 }
-#refusedCookie:hover{
-    background-color: rgb(129, 14, 35);
+#refusedCookie:hover {
+    font-weight: bold;
+    background-color: darkred;
+    transition: 0.2s ease-in-out;
 }
 /* show popup */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 570px) {
+    #cookieContent p {
+        font-size: var(--text-md);
+        line-height: var(--space-28);
+        margin-bottom: var(--space-10);
+    }
+    #cookieContent a {
+        font-size: var(--text-md);
+        text-decoration: none;
+        margin-bottom: var(--space-10);
+    }
+    #cookieContent img {
+        width: 60px;
+        margin: var(--space-16) auto;
+    }
     #cookiePopup {
         width: 100%;
     }
@@ -1335,5 +1355,12 @@ footer p a {
     .show {
         right: 0;
         bottom: 0;
+    }
+    #acceptCookie,
+    #refusedCookie {
+        width: 150px;
+        height: 40px;
+        font-size: var(--text-md);
+        font-weight: 500;
     }
 }

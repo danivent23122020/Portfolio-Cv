@@ -334,14 +334,14 @@ cancelCookie.addEventListener("click", function () {
 acceptCookie.addEventListener("click", function () {
     let d = new Date();
     d.setMinutes(2 + d.getMinutes());
-    document.cookie = "Barbershop=true; expires = ' + d + ';";
+    document.cookie = "PortfolioCV=true; expires = ' + d + ';";
     cookieModal.classList.remove("active");
 });
 
 // check cookie exist
 const checkCookie = () => {
     let input = document.cookie.split("=");
-    if (input[0] == "Barbershop") {
+    if (input[0] == "PortfolioCV") {
         cookieModal.classList.remove("active");
     } else {
         cookieModal.classList.add("active");
