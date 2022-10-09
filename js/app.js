@@ -21,11 +21,11 @@ if (window.matchMedia("(max-width: 1200px)")) {
 // *** scroll to top ***
 //display btn
 window.addEventListener("scroll", function () {
-    let scroll = this.document.querySelector(".btn-scrollup");
+    let scroll = this.document.querySelector(".scrolltop");
     scroll.classList.toggle("active", window.scrollY > 200);
 });
 // scroll to top
-const btnScrollup = document.querySelector(".btn-scrollup");
+const btnScrollup = document.querySelector(".scrolltop");
 btnScrollup.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
